@@ -1,0 +1,397 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5888F7F220C8E0CC001426CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F7F120C8E0CC001426CF /* AppDelegate.swift */; };
+		5888F7F420C8E0CC001426CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F7F320C8E0CC001426CF /* ViewController.swift */; };
+		5888F7F720C8E0CD001426CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5888F7F520C8E0CD001426CF /* Main.storyboard */; };
+		5888F7F920C8E0CE001426CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5888F7F820C8E0CE001426CF /* Assets.xcassets */; };
+		5888F7FC20C8E0CE001426CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5888F7FA20C8E0CE001426CF /* LaunchScreen.storyboard */; };
+		5888F80620C8E0DE001426CF /* DinasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F80420C8E0DE001426CF /* DinasView.swift */; };
+		5888F80720C8E0DE001426CF /* DinasView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F80520C8E0DE001426CF /* DinasView+Extentions.swift */; };
+		5888F80920C8EACF001426CF /* DinasViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F80820C8EACF001426CF /* DinasViewDSL.swift */; };
+		5888F80B20C8EBCF001426CF /* DinasMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F80A20C8EBCF001426CF /* DinasMaker.swift */; };
+		5888F83720C900B4001426CF /* DinasStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F83620C900B4001426CF /* DinasStructure.swift */; };
+		5888F83920C90266001426CF /* DinasAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F83820C90266001426CF /* DinasAttribute.swift */; };
+		5888F83B20C90B46001426CF /* DinasTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F83A20C90B46001426CF /* DinasTarget.swift */; };
+		5888F83D20C917B1001426CF /* DinasPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F83C20C917B1001426CF /* DinasPosition.swift */; };
+		5888F83F20C920CC001426CF /* DinasAnalyzeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F83E20C920CC001426CF /* DinasAnalyzeUtil.swift */; };
+		5888F84120C922DF001426CF /* DinasInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F84020C922DF001426CF /* DinasInstruction.swift */; };
+		5888F84320C93CAA001426CF /* DinasConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F84220C93CAA001426CF /* DinasConstantTarget.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5888F7EE20C8E0CC001426CF /* Dinas-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dinas-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5888F7F120C8E0CC001426CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5888F7F320C8E0CC001426CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5888F7F620C8E0CD001426CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5888F7F820C8E0CE001426CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5888F7FB20C8E0CE001426CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5888F7FD20C8E0CE001426CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5888F80420C8E0DE001426CF /* DinasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinasView.swift; sourceTree = "<group>"; };
+		5888F80520C8E0DE001426CF /* DinasView+Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DinasView+Extentions.swift"; sourceTree = "<group>"; };
+		5888F80820C8EACF001426CF /* DinasViewDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinasViewDSL.swift; sourceTree = "<group>"; };
+		5888F80A20C8EBCF001426CF /* DinasMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinasMaker.swift; sourceTree = "<group>"; };
+		5888F83620C900B4001426CF /* DinasStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinasStructure.swift; sourceTree = "<group>"; };
+		5888F83820C90266001426CF /* DinasAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinasAttribute.swift; sourceTree = "<group>"; };
+		5888F83A20C90B46001426CF /* DinasTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinasTarget.swift; sourceTree = "<group>"; };
+		5888F83C20C917B1001426CF /* DinasPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinasPosition.swift; sourceTree = "<group>"; };
+		5888F83E20C920CC001426CF /* DinasAnalyzeUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinasAnalyzeUtil.swift; sourceTree = "<group>"; };
+		5888F84020C922DF001426CF /* DinasInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinasInstruction.swift; sourceTree = "<group>"; };
+		5888F84220C93CAA001426CF /* DinasConstantTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinasConstantTarget.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5888F7EB20C8E0CC001426CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5888F7E520C8E0CC001426CF = {
+			isa = PBXGroup;
+			children = (
+				5888F7F020C8E0CC001426CF /* Dinas-Swift */,
+				5888F7EF20C8E0CC001426CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5888F7EF20C8E0CC001426CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5888F7EE20C8E0CC001426CF /* Dinas-Swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5888F7F020C8E0CC001426CF /* Dinas-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				5888F80320C8E0DE001426CF /* Dinas-Swift */,
+				5888F7F120C8E0CC001426CF /* AppDelegate.swift */,
+				5888F7F320C8E0CC001426CF /* ViewController.swift */,
+				5888F7F520C8E0CD001426CF /* Main.storyboard */,
+				5888F7F820C8E0CE001426CF /* Assets.xcassets */,
+				5888F7FA20C8E0CE001426CF /* LaunchScreen.storyboard */,
+				5888F7FD20C8E0CE001426CF /* Info.plist */,
+			);
+			path = "Dinas-Swift";
+			sourceTree = "<group>";
+		};
+		5888F80320C8E0DE001426CF /* Dinas-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				5888F80420C8E0DE001426CF /* DinasView.swift */,
+				5888F80520C8E0DE001426CF /* DinasView+Extentions.swift */,
+				5888F80820C8EACF001426CF /* DinasViewDSL.swift */,
+				5888F80A20C8EBCF001426CF /* DinasMaker.swift */,
+				5888F83620C900B4001426CF /* DinasStructure.swift */,
+				5888F83820C90266001426CF /* DinasAttribute.swift */,
+				5888F83A20C90B46001426CF /* DinasTarget.swift */,
+				5888F83C20C917B1001426CF /* DinasPosition.swift */,
+				5888F83E20C920CC001426CF /* DinasAnalyzeUtil.swift */,
+				5888F84020C922DF001426CF /* DinasInstruction.swift */,
+				5888F84220C93CAA001426CF /* DinasConstantTarget.swift */,
+			);
+			path = "Dinas-Swift";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5888F7ED20C8E0CC001426CF /* Dinas-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5888F80020C8E0CE001426CF /* Build configuration list for PBXNativeTarget "Dinas-Swift" */;
+			buildPhases = (
+				5888F7EA20C8E0CC001426CF /* Sources */,
+				5888F7EB20C8E0CC001426CF /* Frameworks */,
+				5888F7EC20C8E0CC001426CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dinas-Swift";
+			productName = "Dinas-Swift";
+			productReference = 5888F7EE20C8E0CC001426CF /* Dinas-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5888F7E620C8E0CC001426CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = ccc;
+				TargetAttributes = {
+					5888F7ED20C8E0CC001426CF = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 5888F7E920C8E0CC001426CF /* Build configuration list for PBXProject "Dinas-Swift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5888F7E520C8E0CC001426CF;
+			productRefGroup = 5888F7EF20C8E0CC001426CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5888F7ED20C8E0CC001426CF /* Dinas-Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5888F7EC20C8E0CC001426CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5888F7FC20C8E0CE001426CF /* LaunchScreen.storyboard in Resources */,
+				5888F7F920C8E0CE001426CF /* Assets.xcassets in Resources */,
+				5888F7F720C8E0CD001426CF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5888F7EA20C8E0CC001426CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5888F7F420C8E0CC001426CF /* ViewController.swift in Sources */,
+				5888F84320C93CAA001426CF /* DinasConstantTarget.swift in Sources */,
+				5888F7F220C8E0CC001426CF /* AppDelegate.swift in Sources */,
+				5888F83B20C90B46001426CF /* DinasTarget.swift in Sources */,
+				5888F83920C90266001426CF /* DinasAttribute.swift in Sources */,
+				5888F83D20C917B1001426CF /* DinasPosition.swift in Sources */,
+				5888F80B20C8EBCF001426CF /* DinasMaker.swift in Sources */,
+				5888F80620C8E0DE001426CF /* DinasView.swift in Sources */,
+				5888F80920C8EACF001426CF /* DinasViewDSL.swift in Sources */,
+				5888F83720C900B4001426CF /* DinasStructure.swift in Sources */,
+				5888F83F20C920CC001426CF /* DinasAnalyzeUtil.swift in Sources */,
+				5888F84120C922DF001426CF /* DinasInstruction.swift in Sources */,
+				5888F80720C8E0DE001426CF /* DinasView+Extentions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5888F7F520C8E0CD001426CF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5888F7F620C8E0CD001426CF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5888F7FA20C8E0CE001426CF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5888F7FB20C8E0CE001426CF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5888F7FE20C8E0CE001426CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5888F7FF20C8E0CE001426CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5888F80120C8E0CE001426CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 462SDB9445;
+				INFOPLIST_FILE = "Dinas-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ccc.Dinas-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4f91d993-606e-43c6-93f4-511c6f27fd0c";
+				PROVISIONING_PROFILE_SPECIFIER = GeneralTest;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5888F80220C8E0CE001426CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 462SDB9445;
+				INFOPLIST_FILE = "Dinas-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ccc.Dinas-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4f91d993-606e-43c6-93f4-511c6f27fd0c";
+				PROVISIONING_PROFILE_SPECIFIER = GeneralTest;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5888F7E920C8E0CC001426CF /* Build configuration list for PBXProject "Dinas-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5888F7FE20C8E0CE001426CF /* Debug */,
+				5888F7FF20C8E0CE001426CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5888F80020C8E0CE001426CF /* Build configuration list for PBXNativeTarget "Dinas-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5888F80120C8E0CE001426CF /* Debug */,
+				5888F80220C8E0CE001426CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5888F7E620C8E0CC001426CF /* Project object */;
+}
