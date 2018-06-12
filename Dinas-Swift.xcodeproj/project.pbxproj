@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		582C0E3D20CFC67900448392 /* DinasThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582C0E3C20CFC67800448392 /* DinasThreadHelper.swift */; };
 		5888F7F220C8E0CC001426CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F7F120C8E0CC001426CF /* AppDelegate.swift */; };
 		5888F7F420C8E0CC001426CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F7F320C8E0CC001426CF /* ViewController.swift */; };
 		5888F7F720C8E0CD001426CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5888F7F520C8E0CD001426CF /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		582C0E3C20CFC67800448392 /* DinasThreadHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinasThreadHelper.swift; sourceTree = "<group>"; };
 		5888F7EE20C8E0CC001426CF /* Dinas-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dinas-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5888F7F120C8E0CC001426CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5888F7F320C8E0CC001426CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				5888F83E20C920CC001426CF /* DinasAnalyzeUtil.swift */,
 				5888F84020C922DF001426CF /* DinasInstruction.swift */,
 				5888F84220C93CAA001426CF /* DinasConstantTarget.swift */,
+				582C0E3C20CFC67800448392 /* DinasThreadHelper.swift */,
 			);
 			path = "Dinas-Swift";
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				5888F80B20C8EBCF001426CF /* DinasMaker.swift in Sources */,
 				5888F80620C8E0DE001426CF /* DinasView.swift in Sources */,
 				5888F80920C8EACF001426CF /* DinasViewDSL.swift in Sources */,
+				582C0E3D20CFC67900448392 /* DinasThreadHelper.swift in Sources */,
 				5888F83720C900B4001426CF /* DinasStructure.swift in Sources */,
 				5888F83F20C920CC001426CF /* DinasAnalyzeUtil.swift in Sources */,
 				5888F84120C922DF001426CF /* DinasInstruction.swift in Sources */,

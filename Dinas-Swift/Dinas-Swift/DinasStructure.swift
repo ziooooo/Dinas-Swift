@@ -61,7 +61,7 @@ class DinasStructure {
     }
     
     @discardableResult
-    func equalToSuperView() -> DinasStructure {
+    func equalToSuperview() -> DinasStructure {
         return append(attribute: DinasEqualToAttribute(target: item!.superview!))
     }
     

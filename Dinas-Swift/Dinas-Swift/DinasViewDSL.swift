@@ -11,7 +11,11 @@ import UIKit
 public struct DinasViewDSL {
 
     public func makeConstraints(_ closure: (_ make: DinasMaker) -> Void) {
-        DinasMaker.makeStructures(item: self.view, closure: closure)
+        DinasMaker.makeStructures(item: self.view, closure: closure).bulid()
+    }
+    
+    public func makeConstraintsDelay(_ closure: (_ make: DinasMaker) -> Void) -> DinasMaker {
+        return DinasMaker.makeStructures(item: self.view, closure: closure)
     }
     
     let view: DinasView

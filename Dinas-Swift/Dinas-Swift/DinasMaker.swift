@@ -10,9 +10,11 @@ import UIKit
 
 public class DinasMaker {
     
-    private let item: DinasView
+    private(set) var item: DinasView
     
-    private let structure: DinasStructure
+    private(set) var structure: DinasStructure
+    
+    lazy private var bulidQueue = DispatchQueue(label: "dinas-queue")
     
     
     init(item: DinasView) {
@@ -20,22 +22,89 @@ public class DinasMaker {
         structure = DinasStructure(item: item)
     }
     
-    static func makeStructures(item: DinasView, closure: (_ make: DinasMaker) -> Void) {
+    @discardableResult
+    static func makeStructures(item: DinasView, closure: (_ make: DinasMaker) -> Void) -> DinasMaker {
         let maker = DinasMaker(item: item)
         closure(maker)
-        maker.bulid()
+        return maker
     }
     
-    func bulid() {
-        
-        let analyzeRes = DinasAnalyzeUtil.analyze(attributes: structure.attributes)
-        
+    @discardableResult
+    func bulid() -> CGRect {
         let originalFrame = item.frame
+        let frame = frameGenerate(originalFrame: originalFrame)
+        
+        item.frame = frame
+        
+        return frame
+    }
+    
+    func bulidAsyn(semaphore: DispatchSemaphore? = nil, _ completion: ((CGRect) -> ())? = nil) {
+        
+        var frame = CGRect.zero
+        var originalFrame = CGRect.zero
+        
+        
+        DinasThreadHelper.mainSync {
+            originalFrame = self.item.frame
+        }
+        
+        bulidQueue.async {
+            if let sem = semaphore {
+                sem.wait()
+            }
+            frame = self.frameGenerate(originalFrame: originalFrame)
+            DispatchQueue.main.sync {
+                self.item.frame = frame
+                if let sem = semaphore {
+                    sem.signal()
+                }
+                if let completion = completion {
+                    completion(frame)
+                }
+            }
+        }
+    }
+    
+    
+    /// 生成frame
+    ///
+    /// - Parameter originalFrame: 原始frame
+    /// - Returns:
+    func frameGenerate(originalFrame: CGRect) -> CGRect {
+        var analyzeRes = DinasAnalyzeUtil.analyze(attributes: structure.attributes)
+        
         
         var x = originalFrame.origin.x
         var y = originalFrame.origin.y
         var w = originalFrame.width
         var h = originalFrame.height
+        
+        DinasThreadHelper.mainSync {
+            if self.item is UILabel {
+                let label = self.item as! UILabel
+                if let insWidth = analyzeRes[DIN_W_ANALYZE_KEY]?[DIN_WIDTH_KEY] {
+                    if let valueTarget = insWidth.equalToAttr?.target as? DinasConstantTarget {
+                        if valueTarget.dinasConstantTargetValueFor(instruction: insWidth) == 0 {
+                            
+                            if let labelText = label.text {
+                                let text = NSString(string: labelText)
+                                let attributes = [NSAttributedStringKey.font: label.font!]
+                                let option = NSStringDrawingOptions.usesLineFragmentOrigin
+                                let textW = text.boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude), options: option, attributes: attributes, context: nil).width
+                                
+                                insWidth.equalToAttr = DinasEqualToAttribute(target: textW)
+                                
+                                analyzeRes[DIN_X_ANALYZE_KEY]![DIN_WIDTH_KEY] = insWidth
+                                analyzeRes[DIN_W_ANALYZE_KEY]![DIN_WIDTH_KEY] = insWidth
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        
         
         //x
         let insXDic = analyzeRes[DIN_X_ANALYZE_KEY]
@@ -168,9 +237,14 @@ public class DinasMaker {
             }
         }
         
-        item.frame = CGRect(x: x, y: y, width: w, height: h)
+        if item is UILabel {//去黑线
+            w = ceil(w)
+        }
         
+        let finalRect = CGRect(x: x, y: y, width: w, height: h)
+        return finalRect
     }
+    
     
 }
 

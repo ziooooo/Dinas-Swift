@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         v.backgroundColor = UIColor.red
         view.addSubview(v)
         v.din.makeConstraints { (make) in
-            make.left.top.equalToSuperView()
+            make.left.top.equalToSuperview()
             make.width.equalTo(100)
             make.height.equalTo(200)
         }
@@ -28,9 +28,9 @@ class ViewController: UIViewController {
         v2.backgroundColor = UIColor.blue
         v.addSubview(v2)
         v2.din.makeConstraints { (make) in
-            make.bottom.equalToSuperView()
+            make.bottom.equalToSuperview()
             make.centerX.equalTo(v.din.right)
-            make.height.equalToSuperView().offset(-100)
+            make.height.equalToSuperview().offset(-100)
             make.width.equalTo(50)
         }
         
@@ -41,6 +41,14 @@ class ViewController: UIViewController {
             make.size.equalTo(CGSize(width: 20, height: 50))
             make.top.equalTo(v2.din.bottom).offset(150)
             make.left.equalTo(v2.din.right)
+        }
+        
+        let v4 = UIView()
+        v4.backgroundColor = UIColor.green
+        view.addSubview(v4)
+        v4.din.makeConstraints { (make) in
+            make.center.equalTo(v)
+            make.size.equalTo(v3)
         }
     }
 

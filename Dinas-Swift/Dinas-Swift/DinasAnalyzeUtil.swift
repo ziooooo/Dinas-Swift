@@ -298,16 +298,23 @@ struct DinasAnalyzeUtil {
                 return 0
             }
             
+            //目标view frame
+            var targetFrame = CGRect.zero
+            
+            DinasThreadHelper.mainSync {
+                targetFrame = target.frame
+            }
+            
             switch instruction.frameAttr.type {
             case .top, .left, .bottom, .right: do {
                 return targetValue + instruction.offset
                 }
             case .centerX: do {
-                let muliplierOffset = (instruction.multiplier - 1) * target.bounds.width
+                let muliplierOffset = (instruction.multiplier - 1) * targetFrame.width
                 return muliplierOffset + instruction.offset + targetValue
                 }
             case .centerY: do {
-                let muliplierOffset = (instruction.multiplier - 1) * target.bounds.height
+                let muliplierOffset = (instruction.multiplier - 1) * targetFrame.height
                 return muliplierOffset + instruction.offset + targetValue
                 }
             case .width, .height: do {
@@ -323,7 +330,11 @@ struct DinasAnalyzeUtil {
     
     private static func targetValue(with position: DinasPosition, relativeView: DinasView) -> CGFloat {
         
-        let relativeRect = DinasAnalyzeUtil.relativeRect(with: relativeView, targetView: position.item)
+        var relativeRect = CGRect.zero
+        
+        DinasThreadHelper.mainSync {
+            relativeRect = DinasAnalyzeUtil.relativeRect(with: relativeView, targetView: position.item)
+        }
         
         var value: CGFloat = 0
         
@@ -351,6 +362,7 @@ struct DinasAnalyzeUtil {
     
     private static func relativeRect(with relativeView: DinasView, targetView: DinasView) -> CGRect {
         var relativeRect: CGRect
+        
         if relativeView.superview == targetView {
             relativeRect = targetView.bounds
         }
