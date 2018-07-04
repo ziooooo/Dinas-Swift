@@ -39,7 +39,7 @@ public class DinasMaker {
         return frame
     }
     
-    func bulidAsyn(semaphore: DispatchSemaphore? = nil, _ completion: ((CGRect) -> ())? = nil) {
+    func bulidAsync(semaphore: DispatchSemaphore? = nil, _ completion: ((CGRect) -> ())? = nil) {
         
         var frame = CGRect.zero
         var originalFrame = CGRect.zero
