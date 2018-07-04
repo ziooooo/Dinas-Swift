@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58200AF120EC53DB00ACA66D /* DinasView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58200AF020EC53DB00ACA66D /* DinasView+Extensions.swift */; };
 		582C0E3D20CFC67900448392 /* DinasThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582C0E3C20CFC67800448392 /* DinasThreadHelper.swift */; };
 		5888F7F220C8E0CC001426CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F7F120C8E0CC001426CF /* AppDelegate.swift */; };
 		5888F7F420C8E0CC001426CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F7F320C8E0CC001426CF /* ViewController.swift */; };
@@ -14,7 +15,6 @@
 		5888F7F920C8E0CE001426CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5888F7F820C8E0CE001426CF /* Assets.xcassets */; };
 		5888F7FC20C8E0CE001426CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5888F7FA20C8E0CE001426CF /* LaunchScreen.storyboard */; };
 		5888F80620C8E0DE001426CF /* DinasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F80420C8E0DE001426CF /* DinasView.swift */; };
-		5888F80720C8E0DE001426CF /* DinasView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F80520C8E0DE001426CF /* DinasView+Extentions.swift */; };
 		5888F80920C8EACF001426CF /* DinasViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F80820C8EACF001426CF /* DinasViewDSL.swift */; };
 		5888F80B20C8EBCF001426CF /* DinasMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F80A20C8EBCF001426CF /* DinasMaker.swift */; };
 		5888F83720C900B4001426CF /* DinasStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888F83620C900B4001426CF /* DinasStructure.swift */; };
@@ -27,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58200AF020EC53DB00ACA66D /* DinasView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DinasView+Extensions.swift"; sourceTree = "<group>"; };
 		582C0E3C20CFC67800448392 /* DinasThreadHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinasThreadHelper.swift; sourceTree = "<group>"; };
 		5888F7EE20C8E0CC001426CF /* Dinas-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dinas-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5888F7F120C8E0CC001426CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +37,6 @@
 		5888F7FB20C8E0CE001426CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5888F7FD20C8E0CE001426CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5888F80420C8E0DE001426CF /* DinasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinasView.swift; sourceTree = "<group>"; };
-		5888F80520C8E0DE001426CF /* DinasView+Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DinasView+Extentions.swift"; sourceTree = "<group>"; };
 		5888F80820C8EACF001426CF /* DinasViewDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinasViewDSL.swift; sourceTree = "<group>"; };
 		5888F80A20C8EBCF001426CF /* DinasMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinasMaker.swift; sourceTree = "<group>"; };
 		5888F83620C900B4001426CF /* DinasStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinasStructure.swift; sourceTree = "<group>"; };
@@ -92,8 +92,8 @@
 		5888F80320C8E0DE001426CF /* Dinas-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				58200AF020EC53DB00ACA66D /* DinasView+Extensions.swift */,
 				5888F80420C8E0DE001426CF /* DinasView.swift */,
-				5888F80520C8E0DE001426CF /* DinasView+Extentions.swift */,
 				5888F80820C8EACF001426CF /* DinasViewDSL.swift */,
 				5888F80A20C8EBCF001426CF /* DinasMaker.swift */,
 				5888F83620C900B4001426CF /* DinasStructure.swift */,
@@ -187,12 +187,12 @@
 				5888F83D20C917B1001426CF /* DinasPosition.swift in Sources */,
 				5888F80B20C8EBCF001426CF /* DinasMaker.swift in Sources */,
 				5888F80620C8E0DE001426CF /* DinasView.swift in Sources */,
+				58200AF120EC53DB00ACA66D /* DinasView+Extensions.swift in Sources */,
 				5888F80920C8EACF001426CF /* DinasViewDSL.swift in Sources */,
 				582C0E3D20CFC67900448392 /* DinasThreadHelper.swift in Sources */,
 				5888F83720C900B4001426CF /* DinasStructure.swift in Sources */,
 				5888F83F20C920CC001426CF /* DinasAnalyzeUtil.swift in Sources */,
 				5888F84120C922DF001426CF /* DinasInstruction.swift in Sources */,
-				5888F80720C8E0DE001426CF /* DinasView+Extentions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
