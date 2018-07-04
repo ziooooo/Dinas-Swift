@@ -1,8 +1,8 @@
 # Dinas-Swift
 
-###Usage
+### Usage
 
-#####normal
+##### normal
 ```swift
 view.din.makeConstraints { (make) in
 	make.left.top.equalToSuperview()
@@ -10,7 +10,7 @@ view.din.makeConstraints { (make) in
 	make.height.equalTo(200)
 }
 ```
-#####other
+##### other
 ```swift
 view.din.makeConstraintsDelay { (make) in
 	make.left.top.equalToSuperview()
